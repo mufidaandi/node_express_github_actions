@@ -53,4 +53,4 @@ jobs:
           app-name: 'c0864756-node-app'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_B6F38DC8DF274B5B9AB52A2FA88B84A6 }}
-          package: '/node_express_github_actions'
+          package: .
