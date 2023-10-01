@@ -29,7 +29,7 @@ app.get('/admin', (req, res) => {
 app.get("/user/:id", (req, res) => {
   const userId = req.params.id;
   // Send the HTML file and include the 'id' as a query parameter
-  res.redirect(`/user.html?id=${userId}`);
+  res.redirect(__dirname + `/user.html?id=${userId}`);
 });
 
 //http://localhost:3000/valueofday/1980-01-24
