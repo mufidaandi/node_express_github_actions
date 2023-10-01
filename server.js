@@ -22,12 +22,14 @@ app.post('/profile', (req, res) => {
 
 //http://localhost:3000/admin
 app.get('/admin', (req, res) => {
-  res.send('Admin Homepage')
+  res.sendFile(__dirname + '/admin.html');
 })
 
 //http://localhost:3000/user/100
 app.get("/user/:id", (req, res) => {
-  res.send(`User ID: ${req.params.id}`);
+  const userId = req.params.id;
+  // Send the HTML file and include the 'id' as a query parameter
+  res.sendFile(`${__dirname}/user.html?id=${userId}`);
 }
 )
 

@@ -1,11 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>My Home Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        a {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        a:hover {
+            background-color: #0056b3;
+        }
+
+        label {
+            font-size: 18px;
+            color: #333;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
-    <h1>This is my home page.</h1>
+    <h1>My Home Page</h1>
+
+    <!-- Link to the Profile Page -->
+    <a href="/profile">Profile Page</a><br>
+
+    <!-- Link to the Admin Page -->
+    <a href="/admin">Admin Page</a><br>
+
+    <!-- User ID Input Field and Link -->
+    <label for="userId">Enter User ID:</label>
+    <input type="text" id="userId" name="userId">
+    <button onclick="goToUserPage()">Go to User</button>
+
+    <script>
+        function goToUserPage() {
+            // Get the user ID from the input field
+            var userId = document.getElementById("userId").value;
+
+            // Navigate to the user's profile page
+            window.location.href = "/user/" + userId;
+        }
+    </script>
 </body>
 </html>
