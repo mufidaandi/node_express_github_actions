@@ -11,7 +11,7 @@ app.use(express.urlencoded({ extended: true })) // for parsing application/x-www
 
 //http://localhost:3000/
 app.get('/', function (req, res) {
-  res.sendFile(__dirname + '/node_express_github_actions/index.html');
+  res.sendFile(__dirname + '/index.html');
 })
 
 //http://localhost:3000/profile
