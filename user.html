@@ -30,13 +30,16 @@
     <p>This is the user page content. </p>
 
     <script>
-        // JavaScript code to retrieve and display the 'id' parameter
-        const urlParams = new URLSearchParams(window.location.search);
-        const userId = urlParams.get('id');
+        // Get the current URL
+        const currentURL = window.location.href;
+
+        // Parse the URL to extract the user ID
+        const parts = currentURL.split('/');
+        const userId = parts[parts.length - 1];
 
         // Display the 'id' in the HTML
         const userIdContainer = document.getElementById('userId');
-        userIdContainer.innerHTML = `User ID: ${userId}`;
+        userIdContainer.innerHTML = 'User ID: ${userId}';
     </script>
 </body>
 </html>
