@@ -11,7 +11,7 @@ app.use(express.urlencoded({ extended: true })) // for parsing application/x-www
 
 //http://localhost:3000/
 app.get('/', function (req, res) {
-    res.send("<h1>Home Page</h1>")
+  res.sendFile(__dirname + 'node_express_github_actions\index.html');
 })
 
 //http://localhost:3000/profile
@@ -26,9 +26,9 @@ app.get('/admin', (req, res) => {
 })
 
 //http://localhost:3000/user/100
-app.get("/user/:id", (req, res)=> {
-      res.send(`User ID: ${req.params.id}`);
-    }
+app.get("/user/:id", (req, res) => {
+  res.send(`User ID: ${req.params.id}`);
+}
 )
 
 //http://localhost:3000/valueofday/1980-01-24
@@ -36,7 +36,7 @@ app.get("/valueofday/:year(\\d{4})-:month(\\d{2})-:day(\\d{2})", (req, res) => {
   console.log(req.params)
   res.send(req.params)
 });
-  
-app.listen(process.env.PORT  || SERVER_PORT, () => {
-    console.log(`Server running at http://${SERVER_HOST}:${SERVER_PORT}/`);
+
+app.listen(process.env.PORT || SERVER_PORT, () => {
+  console.log(`Server running at http://${SERVER_HOST}:${SERVER_PORT}/`);
 })
