@@ -14,6 +14,10 @@ app.get('/', function (req, res) {
   res.sendFile(__dirname + '/index.html');
 });
 
+app.get('/name', function (req, res) {
+  res.sendFile('<h1>c0864756 - Mufida Andi</h1>');
+});
+
 //http://localhost:3000/profile
 app.post('/profile', (req, res) => {
   const { username, email } = req.body;
