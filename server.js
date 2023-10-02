@@ -28,7 +28,6 @@ app.get('/admin', (req, res) => {
 
 //http://localhost:3000/user/100
 app.get("/user/:id", (req, res) => {
-  const userId = req.params.id;
   // Send the HTML file and include the 'id' as a query parameter
   res.sendFile(__dirname + '/user.html');
   // res.redirect(__dirname + `/user.html`);

@@ -105,9 +105,12 @@
         <div class="container">
             <h2>Go to User Page</h2>
             <!-- User ID Input Field and Link -->
-            <label for="userId">Enter User ID:</label>
-            <input type="text" id="userId" name="userId" required>
-            <input type="submit" placeholder="Go to User" onclick="goToUserPage()">
+            <form onsubmit="goToUserPage()">
+                <label for="userId">Enter User ID:</label>
+                <input type="text" id="userId" name="userId" required>
+                <input type="submit" placeholder="Go to User">
+            </form>
+            
             
         </div>
     </div>
