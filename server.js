@@ -15,7 +15,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/name', function (req, res) {
-  res.sendFile('<h1>c0864756 - Mufida Andi</h1>');
+  res.send('<h1>c0864756 - Mufida Andi</h1>');
 });
 
 //http://localhost:3000/profile
