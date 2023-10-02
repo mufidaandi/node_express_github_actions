@@ -27,10 +27,9 @@ app.get('/admin', (req, res) => {
 });
 
 //http://localhost:3000/user/100
-app.get("/user/:id", (req, res) => {
-  // Send the HTML file and include the 'id' as a query parameter
-  res.sendFile(__dirname + '/user.html');
-  // res.redirect(__dirname + `/user.html`);
+app.get("/user", (req, res) => {
+  const userId = req.query.userId;
+  res.send(`User ID: ${userId}`);
 });
 
 //http://localhost:3000/valueofday/1980-01-24
