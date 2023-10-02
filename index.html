@@ -20,7 +20,7 @@
             text-decoration: none;
         }
 
-        .admin-button {
+        .link-button {
             background-color: #996dd2;
             color: white;
             padding: 14px 20px;
@@ -28,9 +28,10 @@
             border-radius: 4px;
             cursor: pointer;
             transition-duration: 0.4s;
+            text-align: center;
         }
 
-        .admin-button:hover {
+        .link-button:hover {
             background-color: #694894;
         }
 
@@ -97,7 +98,7 @@
         <div class="container">
             <h2>Go to Admin Page</h2>
             <!-- Link to the Admin Page -->
-            <div class="admin-button">
+            <div class="link-button">
                 <a href="/admin">Admin Page</a>
             </div>
         </div>
@@ -105,24 +106,27 @@
         <div class="container">
             <h2>Go to User Page</h2>
             <!-- User ID Input Field and Link -->
-            <form action="user/">
-                <label for="userId">Enter User ID:</label>
-                <input type="text" id="userId" name="userId" required>
-                <input type="submit" placeholder="Go to User">
-            </form>
-            
-            
+            <div class="link-button">
+                <a href="/user/100">Go to User 100</a>
+            </div><br>
+            <div class="link-button">
+                <a href="/user/300">Go to User 300</a>
+            </div><br>
+            <div class="link-button">
+                <a href="/user/500">Go to User 500</a>
+            </div>
+        </div>
+
+        <div class="container">
+            <h2>Go to Value of Day Page</h2>
+            <!-- Value of Day Link -->
+            <div class="link-button">
+                <a href="/valueofday/1998-08-16">Get Value of the Day for August 16, 1998</a>
+            </div><br>
+            <div class="link-button">
+                <a href="/valueofday/2023-10-01">Get Value of the Day for October 1, 2023</a>
+            </div>
         </div>
     </div>
-    
-    <script>
-        function goToUserPage() {
-            // Get the user ID from the input field
-            var userId = document.getElementById("userId").value;
-
-            // Navigate to the user's profile page
-            window.location.href = "/user/" + userId;
-        }
-    </script>
 </body>
 </html>

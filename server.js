@@ -27,9 +27,8 @@ app.get('/admin', (req, res) => {
 });
 
 //http://localhost:3000/user/100
-app.get("/user", (req, res) => {
-  const userId = req.query.userId;
-  res.send(`User ID: ${userId}`);
+app.get("/user/:id", (req, res) => {
+  res.send(`User ID: ${req.params.id}`);
 });
 
 //http://localhost:3000/valueofday/1980-01-24
