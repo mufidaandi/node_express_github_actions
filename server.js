@@ -23,7 +23,7 @@ app.post('/profile', (req, res) => {
 
 //http://localhost:3000/admin
 app.get('/admin', (req, res) => {
-  res.sendFile(__dirname + '/admin.html');
+  res.send('Admin Homepage');
 });
 
 //http://localhost:3000/user/100
