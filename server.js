@@ -16,8 +16,9 @@ app.get('/', function (req, res) {
 
 //http://localhost:3000/profile
 app.post('/profile', (req, res) => {
-  console.log(req.body)
-  res.json(req.body)
+  const { username, email } = req.body;
+  // Process the data (e.g., save it to a database)
+  res.send(`Received username: ${username}, email: ${email}`);
 });
 
 //http://localhost:3000/admin
